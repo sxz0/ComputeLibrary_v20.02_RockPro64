@@ -24,6 +24,7 @@
 
 #pragma once
 
+#include <limits>
 #include <algorithm>
 #include "winograd.hpp"
 #include "padding.hpp"

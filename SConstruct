@@ -189,11 +189,7 @@ if 'v7a' in env['estate'] and env['estate'] == '64':
 # Add architecture specific flags
 prefix = ""
 if 'v7a' in env['arch']:
-    env.Append(CXXFLAGS = ['-march=armv7-a', '-mthumb', '-mfpu=neon'])
-    if env['os'] == 'android':
-        env.Append(CXXFLAGS = ['-mfloat-abi=softfp'])
-    else:
-        env.Append(CXXFLAGS = ['-mfloat-abi=hard'])
+    env.Append(CXXFLAGS = ['-march=armv8-a'])
 elif 'v8' in env['arch']:
     if 'sve' in env['arch']:
         env.Append(CXXFLAGS = ['-march=armv8.2-a+sve+fp16+dotprod'])
